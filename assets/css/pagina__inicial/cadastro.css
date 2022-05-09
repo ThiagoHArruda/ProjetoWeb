@@ -1,0 +1,77 @@
+.cadastro__posicao {
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 500px;
+    background-image: linear-gradient( 180deg, #1b2530 0, rgb(38, 27, 48));
+    top: 100px;
+    border-radius: 2px;
+    transition: linear;
+}
+
+.cadastro__posição--escondido {
+    left: -100vw;
+}
+
+.cadastro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cadastro__texto {
+    color: rgba(242, 244, 246, .9);
+    margin: 8px;
+    font-family: 'amazon';
+    text-size-adjust: 100%;
+    font-weight: 500;
+}
+
+h2 {
+    padding-top: 8px;
+    font-size: 1.2rem;
+}
+
+.cadastro__input {
+    color: #1b2530;
+    font-family: 'amazon';
+    text-size-adjust: 100%;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 3px;
+    border-radius: 5px;
+    width: 80%;
+    margin: 8px 10% 5px;
+}
+
+.cadastro__input-erro {
+    border: 1px solid red;
+}
+
+.cadastro__btn {
+    color: rgba(242, 244, 246, .9);
+    background-color: rgba(255, 153, 0, .8);
+    border-radius: 5px;
+    border: 2px solid rgb(27, 37, 48);
+    padding: 8px 6px;
+    width: 80%;
+    margin: 8px 10% 1rem;
+    font-size: 1.1rem;
+    font-family: 'amazon';
+    text-size-adjust: 100%;
+    font-weight: 500;
+}
+
+.cadastro__break {
+    width: 80%;
+    margin: 0px 10% 5px;
+    height: .5rem;
+    flex-basis: 100%;
+    color: white;
+    font-family: 'amazon';
+    font-size: .7rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+}

@@ -1,0 +1,148 @@
+.catalogo {
+    padding-bottom: 24px;
+    position: relative;
+}
+
+#primeiro-catalogo {
+    padding-top: 24px;
+}
+
+.catalogo__texto {
+    font-family: 'amazon';
+    font-size: 19px;
+    color: rgb(242, 244, 246, .9);
+    padding-left: 48px;
+    padding-bottom: 8px;
+}
+
+.catalogo__carrocel {
+    overflow: hidden;
+    padding-left: 48px;
+    display: flex;
+}
+
+.catalogo__carrocel-lista {
+    width: auto;
+    display: flex;
+    list-style: none;
+    transition: 1s;
+}
+
+.carrocel {
+    height: 300px;
+    width: 180px;
+    display: flex;
+    margin-right: 30px;
+}
+
+.carrocel__filme {
+    aspect-ratio: 1481/2222;
+    background-size: cover;
+    object-fit: fill;
+}
+
+.catalogo__carrocel-botaoDireito {
+    position: absolute;
+    margin-left: 15px;
+    top: 0;
+    right: 0;
+    z-index: 300;
+    background-image: url(../img/icons/setaDireita.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: rgba(15, 23, 30, .5);
+    background-position: center;
+    border: none;
+    height: calc(23vw*(50/89));
+    width: 30px;
+    height: 100%;
+    transition: opacity .25s ease, background-color .25s ease;
+}
+
+.catalogo__carrocel-botaoEsquerdo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    background-image: url(../img/icons/setaEsquerda.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: rgba(15, 23, 30, .5);
+    background-position: center;
+    border: none;
+    height: calc(23vw*(50/89));
+    width: 30px;
+    height: 100%;
+    transition: .25;
+    display: none;
+}
+
+.catalogo__carrocel-botaoEsquerdo--ativo {
+    display: initial;
+}
+
+.catalogo__carrocel-botaoEsquerdo--none {
+    display: none;
+}
+
+.catalogo__carrocel-filme:hover {
+    transform: scale(1.05);
+    z-index: 300;
+}
+
+.catalogo .catalogo__carrocel .catalogo__carrocel-caixa:first-child {
+    padding-left: 50px;
+}
+
+.catalogo__carrocel-botaoDireito:hover,
+.catalogo__carrocel-botaoEsquerdo:hover {
+    background-color: rgba(15, 23, 30, .7);
+}
+
+@media screen and (max-width: 1200px) {
+    .catalogo__carrocel-caixa {
+        width: 30vw;
+    }
+    .catalogo__carrocel-filme {
+        height: calc(30vw*(50/89));
+    }
+    .catalogo__carrocel-lista {
+        width: 3000px;
+        height: calc(30vw*(50/89));
+        ;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .catalogo__carrocel-caixa {
+        width: 43vw;
+    }
+    .catalogo__carrocel-filme {
+        height: calc(43vw*(50/89));
+    }
+    .catalogo__carrocel-lista {
+        width: 3000px;
+        height: calc(43vw*(50/89));
+    }
+    .catalogo__carrocel-botaoEsquerdo,
+    .catalogo__carrocel-botaoDireito {
+        height: calc(43vw*(50/89));
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .catalogo__carrocel-caixa {
+        width: 70vw;
+    }
+    .catalogo__carrocel-filme {
+        height: calc(70vw*(50/89));
+    }
+    .catalogo__carrocel-lista {
+        width: 3000px;
+        height: calc(70vw*(50/89));
+    }
+    .catalogo__carrocel-botaoEsquerdo,
+    .catalogo__carrocel-botaoDireito {
+        visibility: hidden;
+    }
+}

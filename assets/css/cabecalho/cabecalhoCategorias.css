@@ -1,0 +1,119 @@
+.categoria__extendida-ativo {
+    height: 400px;
+    padding: 24px 24px 0;
+    z-index: 1000;
+    top: 72px;
+}
+
+.categoria__extendida {
+    display: none;
+    height: 0;
+    width: 0;
+}
+
+#categoria__extendida {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    background-color: #0f171e;
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.categoria__extendida-principal {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 40vw;
+    flex-flow: column;
+}
+
+.categoria__extendida--titulo,
+.extendida_Pgeneros-link,
+.extendida__principal-listaTexto {
+    color: white;
+}
+
+.categoria__extendida--titulo {
+    margin-bottom: 16px;
+    width: 500px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    line-height: 1.6;
+    font-stretch: expanded;
+}
+
+.categoria__extendida-principal--lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.extendida__principal-listaTopico {
+    background-image: url(../../img/fundoCategorias.png);
+    background-color: rgb(40, 72, 103);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    background-clip: content-box, padding-box;
+    width: 32%;
+}
+
+.extendida__principal-listaTexto {
+    height: 63px;
+    width: auto;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+    color: #f2f4f6;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 300;
+    font-stretch: 900;
+    font-family: 'amazon';
+    text-size-adjust: 100%;
+    padding: 18px;
+}
+
+.categoria__extendida-divisao {
+    margin: 0 48px 24px;
+    background-color: #8197a4;
+    border-radius: 2px;
+    min-height: 300px;
+    width: 2px;
+}
+
+.categorias__extendida-generos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    max-width: 40vw;
+}
+
+.extendida__Pgeneros {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    margin-right: 48px;
+    justify-content: space-between;
+}
+
+.extendida__Pgeneros-generos {
+    padding: 4px 0 4px 4px;
+    width: 48%;
+}
+
+.extendida_Pgeneros-link {
+    padding-left: 4px;
+    line-height: 24px;
+    color: #8197a4;
+    font-size: 1rem;
+    font-weight: 300;
+    font-stretch: 900;
+    line-height: 1.6;
+    font-family: 'amazon';
+    text-size-adjust: 100%
+}

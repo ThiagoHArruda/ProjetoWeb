@@ -1,0 +1,25 @@
+body {
+    background-color: #0f171e;
+    width: 100%;
+    padding-top: 72px;
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        padding-top: 56px;
+    }
+}
+
+main,
+header {
+    overflow-x: hidden;
+}
+
+body {
+    position: static;
+}
+
+@font-face {
+    font-family: amazon;
+    src: url(Ember/Amazon-Ember-Medium.ttf) format('truetype'), url(Ember/AmazonEmber_Bd.ttf) format('truetype');
+}

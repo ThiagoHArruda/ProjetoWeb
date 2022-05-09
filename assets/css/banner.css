@@ -1,0 +1,51 @@
+.banner {
+    position: relative;
+    height: calc(100vw/5);
+    width: 100%;
+    background-image: url(../img/banner/banner.jpg);
+    background-size: cover;
+    z-index: 1;
+}
+
+.catalogo__banner-botao {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-image: url(../img/icons/setaDireita.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+    border: none;
+    height: 100%;
+    width: 30px;
+    transition: opacity .25s ease, background-color .25s ease;
+}
+
+.banner__point {
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    position: absolute;
+    z-index: 9;
+    bottom: 0;
+    text-align: center;
+}
+
+.banner__point-click {
+    display: inline-block;
+    background: ivory;
+    cursor: pointer;
+    z-index: 9;
+    margin-right: 7px;
+    width: 13px;
+    height: 13px;
+    box-shadow: 1px 1px 4px rgb(0 0 0 / 40%);
+    border-radius: 50%;
+    background-color: hsla(0, 0%, 100%, .3);
+}
+
+.banner__point-click:first-child {
+    background-color: hsla(0, 0%, 100%, .9);
+}

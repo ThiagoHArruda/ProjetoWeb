@@ -1,0 +1,221 @@
+#cabecalho {
+    z-index: 990;
+    background-image: linear-gradient( 180deg, #1b2530 0, rgba(27, 37, 48, .85));
+    background-color: #0f171e;
+    top: 0px;
+    z-index: 999;
+    position: fixed;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 48px;
+    width: calc(100% - 96px);
+}
+
+.cabecalho__logo {
+    width: 112px;
+    height: 40px;
+    top: 5px;
+    background-image: url(../../img/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: fill;
+}
+
+.cabecalho__menu {
+    padding: 0 16px;
+    flex-grow: 1;
+    height: auto;
+}
+
+.cabecalho__titulo {
+    justify-content: center;
+}
+
+.cabecalho__menu-lista:nth-child(6) {
+    position: relative;
+}
+
+.cabecalho__menu-lista:nth-child(6) a {
+    visibility: hidden;
+    color: #8197a4;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.cabecalho__menu-lista {
+    display: inline-block;
+}
+
+.cabecalho__menu-texto,
+.cabecalho__profile-usuario {
+    color: rgba(242, 244, 246, .9);
+    margin: 8px;
+    font-size: 17px;
+    font-family: 'amazon';
+    text-size-adjust: 100%
+}
+
+.cabecalho__profile-usuario {
+    color: rgba(242, 244, 246, .7);
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.cabecalho__menu-texto:hover,
+.cabecalho__profile-usuario:hover {
+    color: white;
+}
+
+.cabecalho__menu-lista:nth-child(1) a {
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.cabecalho__profile {
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho__profile-img {
+    width: 25px;
+}
+
+.cabecalho__menu-lista:nth-child(4) {
+    margin-right: 10px;
+}
+
+.cabecalho__menu-lista:nth-child(4),
+.cabecalho__profile {
+    position: static;
+}
+
+.cabecalho__menu-listaSpan,
+.cabecalho__profileSpan {
+    position: sticky;
+}
+
+.cabecalho__menu-listaSpan::after,
+.cabecalho__profileSpan::after,
+.cabecalho__menu-lista:nth-child(6)::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    right: -6px;
+    display: block;
+    height: 0;
+    width: 0;
+    border-top: 4.3px solid #8197a4;
+    border-right: 4.3px solid transparent;
+    border-left: 4.3px solid transparent;
+}
+
+.cabecalho__profile:focus::after {
+    transform: rotate(180deg);
+}
+
+.cabecalho__menu-lista:nth-child(4):hover::after,
+.cabecalho__profile:hover::after,
+.cabecalho__menu-lista:nth-child(6):hover::after {
+    border-top: 4.3px solid white;
+    border-right: 4.3px solid transparent;
+    border-left: 4.3px solid transparent;
+}
+
+.cabecalho__profile::after {
+    top: 50%;
+    transition: .3s;
+}
+
+.cabecalho__menu-lista:nth-child(6)::after {
+    visibility: hidden;
+}
+
+.cabecalho__pesquisa-input {
+    max-width: 30px;
+    height: 1.2rem;
+    background-color: transparent;
+    background-image: url(../../img/icons/lupa.png);
+    background-size: 1.3rem;
+    background-repeat: no-repeat;
+    border: 0;
+    border-radius: 2px;
+    padding: 2px;
+    transition: max-width linear .2s;
+    color: white;
+    margin-right: 10px;
+}
+
+.cabecalho__pesquisa-inputAtivo {
+    max-width: 350px;
+    height: 1.2rem;
+    background-color: transparent;
+    background-image: url(../../img/icons/lupa.png);
+    background-size: 1.3rem;
+    background-repeat: no-repeat;
+    border: 1px solid #8197a4;
+    border-radius: 2px;
+    padding: 2px;
+    padding-left: 2rem;
+    transition: max-width linear .2s;
+    color: white;
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .cabecalho {
+        padding: 16px 32px;
+        width: calc(100% - 64px);
+    }
+    .cabecalho__menu-lista:nth-last-child(n+2) {
+        display: none;
+    }
+    .cabecalho__menu-lista:nth-last-child(1) a {
+        visibility: visible;
+    }
+    .cabecalho__menu-lista:nth-child(6)::after {
+        visibility: visible;
+    }
+    .cabecalho__menu {
+        display: flex;
+        align-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cabecalho {
+        padding: 8px 16px;
+        width: calc(100% - 32px);
+    }
+    .cabecalho__menu-lista:nth-last-child(1) {
+        z-index: 99;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cabecalho__profile-usuario {
+        display: none;
+    }
+    .cabecalho__profile::after {
+        display: none;
+    }
+    .cabecalho__menu-lista {
+        padding: 0;
+    }
+    .cabecalho {
+        padding: 8px 12px;
+        width: calc(100% - 24px);
+    }
+    .cabecalho__pesquisa {
+        margin-right: 16px;
+    }
+    .cabecalho__profile {
+        padding-right: 16px;
+    }
+}
