@@ -3,189 +3,60 @@
 
 <head>
     <meta charset="UTF-8">
-    </meta>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    </meta>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prime Video</title>
+    <title>Login</title>
     <link rel="stylesheet" href="assets/css/reset.css">
-    </link>
     <link rel="stylesheet" href="assets/css/index.css">
-    </link>
-    <link rel="stylesheet" href="assets/css/cabecalho/cabecalhoCategorias.css">
-    </link>
     <link rel="stylesheet" href="assets/css/cabecalho/cabecalho.css">
-    </link>
-    <link rel="stylesheet" href="assets/css/banner.css">
-    </link>
-    <link rel="stylesheet" href="assets/css/catalogo.css">
-    </link>
-    <script src="https://kit.fontawesome.com/885aa17366.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/pagina__inicial/login.css">
+    <link rel="stylesheet" href="assets/css/pagina__inicial/cadastro.css">
 </head>
 
 <body>
     <header>
         <div class="cabecalho" id="cabecalho">
-            <div alt="Logo Prime Video" class="cabecalho__logo"></div>
-            <nav class="cabecalho__menu">
-                <ul class="cabecalho__menu-ul">
-                    <li class="cabecalho__menu-lista"><a href="#" class="cabecalho__menu-texto">Início</a></li>
-                    <li class="cabecalho__menu-lista"><a href="usuarios.html" class="cabecalho__menu-texto">Loja</a>
-                    </li>
-                    <li class="cabecalho__menu-lista"><a href="#" class="cabecalho__menu-texto">Canais</a></li>
-                    <li class="cabecalho__menu-lista" id="categorias">
-                        <span class="cabecalho__menu-listaSpan">
-                            <a href="#" class="cabecalho__menu-texto">Categorias
-                            </a>
-                        </span>
-                        <div id="categoria__extendida" class="categoria__extendida">
-                            <div class="categoria__extendida-principal">
-                                <h3 class="categoria__extendida--titulo">Principais Categorias</h3>
-                                <ul class="categoria__extendida-principal--lista">
-                                    <li class="extendida__principal-listaTopico">
-                                        <a href="#" class="extendida__principal-listaTexto">Incluido no Prime</a>
-                                    </li>
-                                    <li class="extendida__principal-listaTopico">
-                                        <a href="#" class="extendida__principal-listaTexto">Amazon Original e
-                                            Exclusivo</a></li>
-                                    <li class="extendida__principal-listaTopico">
-                                        <a href="#" class="extendida__principal-listaTexto">Filmes</a></li>
-                                    <li class="extendida__principal-listaTopico">
-                                        <a href="#" class="extendida__principal-listaTexto">Séries</a></li>
-                                    <li class="extendida__principal-listaTopico">
-                                        <a href="#" class="extendida__principal-listaTexto">Infantis</a></li>
-                                    <li class="extendida__principal-listaTopico">
-                                        <a href="#" class="extendida__principal-listaTexto">Esportes</a></li>
-                                </ul>
-                            </div>
-                            <div class="categoria__extendida-divisao"></div>
-                            <div class="categorias__extendida-generos">
-                                <div class="categorias__extendida-Pgeneros">
-                                    <h3 class="categoria__extendida--titulo">Gêneros</h3>
-                                    <ul class="extendida__Pgeneros">
-                                        <li class="extendida__Pgeneros-generos">
-                                            <a href="" class="extendida_Pgeneros-link">Ação e Aventuda</a>
-                                        </li>
-                                        <li class="extendida__Pgeneros-generos">
-                                            <a href="" class="extendida_Pgeneros-link">Comédia</a>
-                                        </li>
-                                        <li class="extendida__Pgeneros-generos">
-                                            <a href="" class="extendida_Pgeneros-link">Drama</a>
-                                        </li>
-                                        <li class="extendida__Pgeneros-generos">
-                                            <a href="" class="extendida_Pgeneros-link">Documentários</a>
-                                        </li>
-                                        <li class="extendida__Pgeneros-generos">
-                                            <a href="" class="extendida_Pgeneros-link">Para crianças e toda
-                                                família</a>
-                                        </li>
-                                        <li class="extendida__Pgeneros-generos">
-                                            <a href="" class="extendida_Pgeneros-link">Fantasia</a>
-                                        </li>
-                                        <li class="extendida__Pgeneros-generos">
-                                            <a href="" class="extendida_Pgeneros-link">Terror</a>
-                                        </li>
-                                        <li class="extendida__Pgeneros-generos">
-                                            <a href="" class="extendida_Pgeneros-link">Romance</a>
-                                        </li>
-                                        <li class="extendida__Pgeneros-generos">
-                                            <a href="" class="extendida_Pgeneros-link">Ficção científica</a>
-                                        </li>
-                                        <li class="extendida__Pgeneros-generos">
-                                            <a href="" class="extendida_Pgeneros-link">Suspense</a>
-                                        </li>
-                                        <li class="extendida__Pgeneros-generos">
-                                            <a href="" class="extendida_Pgeneros-link">Anime</a>
-                                        </li>
-                                        <li class="extendida__Pgeneros-generos">
-                                            <a href="" class="extendida_Pgeneros-link">Militar e Guerra</a>
-                                        </li>
-                                        <li class="extendida__Pgeneros-generos"><a href="" class="extendida_Pgeneros-link">Policial</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="categorias__extendida-Sgeneros"></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="cabecalho__menu-lista"><a href="test.html" class="cabecalho__menu-texto">Minha Área</a>
-                    </li>
-                    <li id="cabecalho__menu-explorar" class="cabecalho__menu-lista"><a href="#" class="cabecalho__menu-texto">Explorar</a></li>
-                </ul>
-            </nav>
-            <input class="cabecalho__pesquisa-input" type="text">
-
-
-            <div class="cabecalho__profile">
-                <img src="assets/img/icons/perfil.png" alt="Foto Perfil" class="cabecalho__profile-img">
-                <span class="cabecalho__profileSpan">
-                    <a class="cabecalho__profile-usuario" href="#" alt="Nome do Usuario">Thiago</a>
-                </span>
-            </div>
-
+            <a href="index.html">
+                <div alt="Logo Prime Video" class="cabecalho__logo"></div>
+            </a>
         </div>
-
-
     </header>
     <main>
-        <section class="banner">
-            <button class="catalogo__banner-botao" id="catalogo__btn-direito"></button>
-            <ul class="banner__point">
-                <li class="banner__point-click"></li>
-                <li class="banner__point-click"></li>
-                <li class="banner__point-click"></li>
-                <li class="banner__point-click"></li>
-                <li class="banner__point-click"></li>
-                <li class="banner__point-click"></li>
-                <li class="banner__point-click"></li>
-                <li class="banner__point-click"></li>
-                <li class="banner__point-click"></li>
-                <li class="banner__point-click"></li>
-            </ul>
-        </section>
-        <section class="catalogo" id='primeiro-catalogo'>
-            <h1 class="catalogo__texto"></h1>
-            <div>
-                <button class="catalogo__carrocel-botaoEsquerdo"></button>
-                <div class="catalogo__carrocel">
-                    <ul class="catalogo__carrocel-lista">
+        <div class='caixa__login'>
+            <form action="submit" class="login">
+                <p class="login__texto">Usuário</p>
+                <input type="text" class="login__input" required>
+                <div class='login__break'></div>
+                <p class="login__texto">Senha</p>
+                <input type="password" class="login__input" autocomplete="" required>
+                <div class='login__break'></div>
+                <a href="#" class='login__texto' id="cadastro">Realizar Cadastro</a>
+                <button class="login__btn">Entrar</button>
+            </form>
+            <div class="cadastro__posicao cadastro__posição--escondido">
+                <h2 class='cadastro__texto'>Cadastro da Amazon</h2>
+                <form action="submit" id='cadastroForm' class="cadastro">
+                    <input type="text" class="cadastro__input" placeholder="Nome" data-tipo='nome' required>
+                    <div class='cadastro__break'></div>
+                    <input type="text" class="cadastro__input" placeholder="Usuário" data-tipo='user' required>
+                    <div class='cadastro__break'></div>
+                    <input type="email" class="cadastro__input" placeholder="Email" data-tipo='email' required>
+                    <div class='cadastro__break'></div>
+                    <input type="password" class="cadastro__input" placeholder="Senha" autocomplete="" data-tipo='senha1' required>
+                    <div class='cadastro__break'></div>
+                    <input type="password" class="cadastro__input" data-tipo='senha2' placeholder="Confirme a Senha" autocomplete="" required>
+                    <div class='cadastro__break'></div>
 
-                    </ul>
-                </div>
-                <button class="catalogo__carrocel-botaoDireito"></button>
+                    <button type="submit" class='cadastro__btn'>Cadastrar</button>
+                </form>
             </div>
-        </section>
-        <section class="catalogo">
-            <h1 class="catalogo__texto "></h1>
-            <div>
-                <button class="catalogo__carrocel-botaoEsquerdo"></button>
-                <div class="catalogo__carrocel">
-                    <ul class="catalogo__carrocel-lista">
-
-                    </ul>
-                </div>
-                <button class="catalogo__carrocel-botaoDireito"></button>
-            </div>
-        </section>
-        <section class="catalogo">
-            <h1 class="catalogo__texto "></h1>
-            <div>
-                <button class="catalogo__carrocel-botaoEsquerdo"></button>
-                <div class="catalogo__carrocel">
-                    <ul class="catalogo__carrocel-lista">
-
-                    </ul>
-                </div>
-                <button class="catalogo__carrocel-botaoDireito"></button>
-            </div>
-        </section>
+        </div>
 
     </main>
-    <script type='module' src="assets/js/movie/movie.js"></script>
-    <script src="assets/js/animation/moveCarrocel.js"></script>
-    <script src="assets/js/animation/divCabecalho.js"></script>
 
-
+    <script src="assets/js/animation/divCadastro.js"></script>
+    <script type="module" src="assets/js/userSL/submit.js"></script>
+    <script type="module" src="assets/js/validacao/validacaoCadastro.js"></script>
 </body>
 
 </html>
