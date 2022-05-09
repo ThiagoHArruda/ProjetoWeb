@@ -30,7 +30,7 @@ export class Login {
             result = { token: result.token, id: result.id }
             localStorage.setItem("token", JSON.stringify(result));
             alert("Login feio com sucesso")
-            window.location.href = 'index.html'
+            window.location.href = 'home.html'
         } else {
             result = await result.json()
             alert(`Erro no login ${result.error}`)
