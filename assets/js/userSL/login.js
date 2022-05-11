@@ -1,17 +1,22 @@
+import { catalogoHelpers } from "../helpers/catalogoHelpers.js";
 export class Login {
     constructor(email, senha) {
         this.item = { email: email, password: senha };
     }
 
     async login() {
-        console.log(this.item);
         //primeiro ele varre a localStorage para usar os dados cadastrados
-        if (this.loginLocal(this.item)) {
-            alert("Login feio com sucesso")
-            window.location.href = 'index.html'
-        } else
-        //depois ele procura a API
-            this.loginAPI(this.item)
+        this.loginAPI(this.item).then((data) => {
+
+            if (data || this.loginLocal(this.item)) {
+                alert('entrou') //precisa tirar
+                let catalogo = new catalogoHelpers
+                catalogo.mostraCatalogo
+
+            } else {
+                console.log("Erro");
+            }
+        })
 
     }
 
@@ -29,17 +34,16 @@ export class Login {
             result = await result.json()
             result = { token: result.token, id: result.id }
             localStorage.setItem("token", JSON.stringify(result));
-            alert("Login feio com sucesso")
-            window.location.href = 'home.html'
+            this.getToken()
+            return true
         } else {
             result = await result.json()
-            alert(`Erro no login ${result.error}`)
+            return false
         }
     }
     loginLocal(item) {
         let login = false
         const listaCadastro = JSON.parse(localStorage.getItem("ListaCadastro")) || [];
-
         listaCadastro.forEach((element) => {
             if (element.email == item.email && element.senha1 == item.password) {
                 console.log(element.user, element.senha1);
@@ -63,6 +67,5 @@ export class Login {
         let nome = test.data.first_name;
         let sobrenome = test.data.last_name
         console.log(nome, sobrenome);
-
     }
 }

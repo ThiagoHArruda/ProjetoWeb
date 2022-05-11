@@ -5,7 +5,6 @@ import { errCadastro } from "./mensagemError.js"
 let inputCadastro = document.querySelectorAll(".cadastro__input")
 let divErro = document.querySelectorAll('.cadastro__break')
 
-console.log(inputCadastro);
 
 inputCadastro.forEach((element, contador) => {
 

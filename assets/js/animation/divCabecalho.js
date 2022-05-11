@@ -34,7 +34,7 @@
          inputPesquisa.value = ''
      }
  })
- console.log(usuario)
+
  usuario.addEventListener("click", () => {
      usuario.classList.toggle('gira__seta')
  })
