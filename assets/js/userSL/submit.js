@@ -3,8 +3,7 @@ import { Login } from './login.js'
 
 let formRegister = document.getElementById("cadastroForm")
 let formLogin = document.querySelector(".login")
-let section = document.querySelector(".section")
-section.parentNode.removeChild(section)
+
 
 
 
