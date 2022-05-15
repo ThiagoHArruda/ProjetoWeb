@@ -6,8 +6,8 @@ const usersRandom = 'https://reqres.in/api/users?page=2'
 const usersRandom1 = 'https://randomuser.me/api'
 
 
-let genrer = new genrerMovie()
-genrer.GenrerList
+//let genrer = new genrerMovie()
+//genrer.GenrerList
 const render_user = (data) => {
 
 
@@ -53,12 +53,15 @@ const gender = "https://api.themoviedb.org/3//genre/movie/list?api_key=650034e97
 
 function successCB(data) {
     console.log(data);
+
 };
 
 function errorCB(data) {
     console.log("Error callback: " + data);
 };
-// theMovieDb.collections.getDetails({ "id": 12 }, successCB, errorCB);
+theMovieDb.genres.getMovies({ "id": 28 }, successCB, errorCB)
+theMovieDb.genres.getMovieList("", successCB, errorCB)
+
 
 
 
@@ -68,7 +71,7 @@ fetch(gender)
     .then((resp) => resp.json())
     .then((data) => {
 
-        console.log(data);
+        //console.log(data);
 
         //pegando nomes e imagem de generos
         // let filmes = data.results

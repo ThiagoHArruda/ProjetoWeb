@@ -1,5 +1,5 @@
 export class cabecalhoView {
-    static template(nome) {
+    static template(nome, avatar) {
         return `
         <div alt="Logo Prime Video" class="cabecalho__logo"></div>
 
@@ -91,10 +91,11 @@ export class cabecalhoView {
   </nav>
   <input class="cabecalho__pesquisa-input" type="text">
   <div class="cabecalho__profile">
-      <img src="assets/img/icons/perfil.png" alt="Foto Perfil" class="cabecalho__profile-img">
+      <img src="${avatar}" alt="Foto Perfil" class="cabecalho__profile-img">
       <span class="cabecalho__profileSpan">
           <a class="cabecalho__profile-usuario" href="#" alt="Nome do Usuario">${nome}</a>
       </span>
+      <div class="cabecalho__profile-out-hover"><a href="#" class="cabecalho__menu-texto">Sair</a></div>
   </div>`
     }
 }

@@ -1,4 +1,5 @@
 import { catalogoHelpers } from "../helpers/catalogoHelpers.js";
+import { alertView } from "../view/alert.js";
 export class Login {
     constructor(email, senha) {
         this.item = { email: email, password: senha };
@@ -7,14 +8,15 @@ export class Login {
     async login() {
         //primeiro ele varre a localStorage para usar os dados cadastrados
         this.loginAPI(this.item).then((data) => {
-
-            if (data || this.loginLocal(this.item)) {
-                alert('entrou') //precisa tirar
+            const local = this.loginLocal(this.item)
+            let Alerta = new alertView()
+            if (data || local) {
                 let catalogo = new catalogoHelpers
                 catalogo.mostraCatalogo
+                Alerta.alerta("Entrou")
 
             } else {
-                console.log("Erro");
+                Alerta.alerta("Erro no login")
             }
         })
 
@@ -32,9 +34,17 @@ export class Login {
         });
         if (result.status == 200) {
             result = await result.json()
-            result = { token: result.token, id: result.id }
-            localStorage.setItem("token", JSON.stringify(result));
-            this.getToken()
+            this.getToken(result.id).then((data) => {
+                result = {
+                    id: result.id,
+                    nome: data.nome,
+                    sobrenome: data.sobrenome,
+                    token: result.token,
+                    avatar: data.avatar
+                }
+                localStorage.setItem("token", JSON.stringify(result));
+            })
+
             return true
         } else {
             result = await result.json()
@@ -53,10 +63,8 @@ export class Login {
         return login
     }
 
-    async getToken() {
-        let token = JSON.parse(localStorage.getItem('token'))
-        console.log(`https://reqres.in/api/users/${token.id}`);
-        let test = await fetch(`https://reqres.in/api/users/${token.id}`, {
+    async getToken(id) {
+        let test = await fetch(`https://reqres.in/api/users/${id}`, {
             method: 'GET',
             headers: {
                 "Content-Type": 'application/json',
@@ -64,8 +72,7 @@ export class Login {
             },
         });
         test = await test.json()
-        let nome = test.data.first_name;
-        let sobrenome = test.data.last_name
-        console.log(nome, sobrenome);
+        let nomeC = { nome: test.data.first_name, sobrenome: test.data.last_name, avatar: test.data.avatar }
+        return nomeC
     }
 }

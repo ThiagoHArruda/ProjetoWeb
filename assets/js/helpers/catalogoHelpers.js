@@ -10,8 +10,8 @@ export class catalogoHelpers {
     get mostraCatalogo() {
         this.retiraLogin()
         this.colocaSection()
+        this.colocaMovie()
         this.colocaCabecalho()
-
     }
     retiraLogin() {
         let caixaLogin = document.querySelector('.caixa__login')
@@ -26,19 +26,27 @@ export class catalogoHelpers {
 
     }
     colocaCabecalho() {
-        let nome = 'thiago'
-        let cabecalho = document.querySelector('.cabecalho')
-        cabecalho.innerHTML = cabecalhoView.template(nome)
+        this.pegaLocal()
+            .then((data) => {
+                const cabecalho = document.querySelector('.cabecalho')
 
-        divCabecalho.categoriaExtendida()
-        divCabecalho.inputPesquisaAnimation()
+                cabecalho.innerHTML = cabecalhoView.template(data.nome, data.avatar)
+                divCabecalho.categoriaExtendida()
+                divCabecalho.inputPesquisaAnimation()
+                divCabecalho.outProfile()
+            })
 
+    }
+    pegaLocal() {
+        return new Promise((req, res) => {
+            const listaCadastro = JSON.parse(localStorage.getItem("token"))
+            req(listaCadastro)
+        })
     }
     colocaSection() {
         let section = document.querySelector(".section")
-
         section.innerHTML = catalogoView.template()
-        this.colocaMovie()
+
     }
 
     colocaMovie() {
@@ -46,7 +54,5 @@ export class catalogoHelpers {
         genrer.GenrerList
         moveCarrocel.mover()
     }
-
-
 
 }

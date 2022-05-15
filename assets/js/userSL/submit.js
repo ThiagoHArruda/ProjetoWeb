@@ -1,12 +1,16 @@
 import { criaID } from './criaID.js'
 import { Login } from './login.js'
+import { catalogoHelpers } from "../helpers/catalogoHelpers.js";
 
 let formRegister = document.getElementById("cadastroForm")
 let formLogin = document.querySelector(".login")
+let lista = localStorage.getItem('token') ? localStorage.getItem('token').length : null;
+//carrega página se possuir um token
+if (lista) {
+    let catalogo = new catalogoHelpers
+    catalogo.mostraCatalogo
 
-
-
-
+}
 
 formRegister.addEventListener('submit', (event) => {
     event.preventDefault();

@@ -39,7 +39,8 @@
     border-radius: 5px;
 }
 
-.login__btn {
+.login__btn,
+.caixa__alerta-ok {
     color: rgba(242, 244, 246, .9);
     background-color: rgba(255, 153, 0, .8);
     border-radius: 5px;

@@ -1,3 +1,4 @@
+import { alertView } from "../view/alert.js";
 export class divCabecalho {
     //toggle aba categoria
     static categoriaExtendida() {
@@ -34,6 +35,26 @@ export class divCabecalho {
                 inputPesquisa.placeholder = ""
                 inputPesquisa.value = ''
             }
+        })
+    }
+    static outProfile() {
+        const profile = document.querySelector(".cabecalho__profile")
+        const out = profile.children[2]
+
+        profile.addEventListener('click', () => {
+            if (out.className === 'cabecalho__profile-out') {
+                out.classList.remove('cabecalho__profile-out')
+                out.classList.add('cabecalho__profile-out-hover')
+            } else {
+                out.classList.remove('cabecalho__profile-out-hover');
+                out.classList.add('cabecalho__profile-out')
+            }
+        })
+
+        out.addEventListener("click", () => {
+            localStorage.removeItem('token')
+            const Alerta = new alertView()
+            Alerta.alerta("Logout feito com sucesso")
         })
     }
 }

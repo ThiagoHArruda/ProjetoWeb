@@ -6,6 +6,7 @@ export class genrerMovie {
         this.genrer = "https://api.themoviedb.org/3//genre/movie/list?api_key=650034e9709e515cc4452e2a99095e59"
         this.genrerList = new Array()
         this.moviesGenrer = new Array()
+
     }
     get GenrerList() {
         return fetch(this.genrer)
@@ -14,13 +15,14 @@ export class genrerMovie {
                 data.genres.forEach((element) => {
                     this.genrerList.push(element)
                 })
-                console.log(this.genrerList);
+
                 for (let index = 0; index < 3; index++) {
                     let pos = Math.floor(Math.random() * 20)
                     const id = this.genrerList[pos].id
                     const name = this.genrerList[pos].name
-                    console.log(id);
+
                     this.GenrerMovieList(id, name, index)
+
                 }
 
 
