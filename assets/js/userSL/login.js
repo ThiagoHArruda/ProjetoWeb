@@ -11,9 +11,12 @@ export class Login {
             const local = this.loginLocal(this.item)
             let Alerta = new alertView()
             if (data || local) {
-                let catalogo = new catalogoHelpers
-                catalogo.mostraCatalogo
-                Alerta.alerta("Entrou")
+                const lista = localStorage.getItem('token')
+                if (lista) {
+                    let catalogo = new catalogoHelpers
+                    catalogo.mostraCatalogo
+                    Alerta.alerta("Entrou")
+                }
 
             } else {
                 Alerta.alerta("Erro no login")
@@ -24,6 +27,7 @@ export class Login {
 
 
     async loginAPI(item) {
+
         let result = await fetch("https://reqres.in/api/register", {
             method: 'POST',
             headers: {
@@ -44,12 +48,13 @@ export class Login {
                 }
                 localStorage.setItem("token", JSON.stringify(result));
             })
-
             return true
+
+
         } else {
             result = await result.json()
-            return false
         }
+        return false
     }
     loginLocal(item) {
         let login = false

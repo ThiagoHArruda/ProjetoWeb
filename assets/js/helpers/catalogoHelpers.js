@@ -26,23 +26,26 @@ export class catalogoHelpers {
 
     }
     colocaCabecalho() {
-        this.pegaLocal()
-            .then((data) => {
-                const cabecalho = document.querySelector('.cabecalho')
-
-                cabecalho.innerHTML = cabecalhoView.template(data.nome, data.avatar)
-                divCabecalho.categoriaExtendida()
-                divCabecalho.inputPesquisaAnimation()
-                divCabecalho.outProfile()
-            })
-
-    }
-    pegaLocal() {
-        return new Promise((req, res) => {
+        let test = 0
+        let myinterval = setInterval(() => {
             const listaCadastro = JSON.parse(localStorage.getItem("token"))
-            req(listaCadastro)
-        })
+            const cabecalho = document.querySelector('.cabecalho')
+            cabecalho.innerHTML = cabecalhoView.template(listaCadastro.nome, listaCadastro.avatar)
+            divCabecalho.categoriaExtendida()
+            divCabecalho.inputPesquisaAnimation()
+            divCabecalho.outProfile()
+            test = test + 1
+
+            if (test == 3) {
+
+                clearInterval(myinterval);
+            }
+        }, 1500);
+
+
+
     }
+
     colocaSection() {
         let section = document.querySelector(".section")
         section.innerHTML = catalogoView.template()
