@@ -27,20 +27,15 @@ export class catalogoHelpers {
     }
     colocaCabecalho() {
         let test = 0
-        let myinterval = setInterval(() => {
-            const listaCadastro = JSON.parse(localStorage.getItem("token"))
-            const cabecalho = document.querySelector('.cabecalho')
-            cabecalho.innerHTML = cabecalhoView.template(listaCadastro.nome, listaCadastro.avatar)
-            divCabecalho.categoriaExtendida()
-            divCabecalho.inputPesquisaAnimation()
-            divCabecalho.outProfile()
-            test = test + 1
 
-            if (test == 3) {
+        const listaCadastro = JSON.parse(localStorage.getItem("token"))
+        const cabecalho = document.querySelector('.cabecalho')
+        cabecalho.innerHTML = cabecalhoView.template(listaCadastro.nome, listaCadastro.avatar)
+        divCabecalho.categoriaExtendida()
+        divCabecalho.inputPesquisaAnimation()
+        divCabecalho.outProfile()
+        test = test + 1
 
-                clearInterval(myinterval);
-            }
-        }, 1500);
 
 
 

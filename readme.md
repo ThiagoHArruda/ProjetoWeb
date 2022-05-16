@@ -1,3 +1,5 @@
-Professor, estou tento dificuldades com requisar o local storage em ./helpers/catalogoHelpers.js, na function colocaCabecalho, pois ele requisita o o LocalStorage antes do login ser armazenado.
+Para o Login utilizar os emails de: https://reqres.in
+A API de filmes é: https://developers.themoviedb.org/
+                   https://github.com/cavestri/themoviedb-javascript-library
 
 https://thiagoharruda.github.io/ProjetoWeb/
